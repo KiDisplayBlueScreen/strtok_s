@@ -100,11 +100,11 @@ label:
 	TempESI=(char*)(((DWORD)TempESI ^ 0xFFFFFFFF) + 1);
 	if (TempESI == 0)
 	{
-		TempESI = (char*)(TempESI - TempESI);
+		TempESI = (char*)0;
 	}
 	else
 	{
-		TempESI = (char*)(TempESI - TempESI-1);
+		TempESI = (char*)0xFFFFFFFF;
 	}
 	TempESI =(char*) ((DWORD)TempESI&(DWORD)TempEBX);
 	*Temp = TempEDI;
